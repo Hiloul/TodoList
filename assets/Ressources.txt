@@ -1,0 +1,16 @@
+Credit pour l'image cahier: 
+rawpixel.com
+
+Icônes utilisées: 
+font-awesome (lien cdnj)
+
+Fonts: 1001-Font license pdf dans le dossier ./assets/fonts/...
+
+css button: 
+getcssscan
+
+color: 
+web-color.aliasdmc
+1. Nuances de orange pour element important
+	-> orangered: text-deco + x
+	-> tomato: button + pin

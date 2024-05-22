@@ -1,0 +1,201 @@
+/* Fonts */
+@font-face {
+    font-family: 'NexaRustHandmade-Extended';
+    src: url('../assets/fonts/NexaRustHandmade-Extended.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'blzee';
+    src: url('../assets/fonts/blzee.ttf') format('truetype');
+}
+
+/* Global Styles */
+* {
+    font-family: 'blzee', sans-serif;
+}
+
+body {
+    margin-top: 50px;
+    background-color: #f0f0f0;
+}
+
+/* Container Styles */
+.container {
+    height: 80vh;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('../assets/cahier.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fade-in 1s;
+}
+
+/* Keyframes */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    animation: slide-in-left 1s;
+}
+
+nav img {
+    width: 50px;
+    height: 45px;
+}
+
+/* Footer Styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    animation: fade-in 1s;
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'NexaRustHandmade-Extended', sans-serif;
+}
+
+/* Date Styles */
+#currentDate {
+    text-align: right;
+    text-decoration: underline;
+    text-decoration-color: orangered;
+}
+
+/* Input Styles */
+input[type="text"] {
+    width: calc(100% - 80px);
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* Button Styles */
+button {
+    cursor: pointer;
+    --b: 1.5px;
+    --s: .35em;
+    --color: #373B44;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p) / calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:hover,
+button:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+button:active {
+    background: var(--color);
+    color: #fff;
+}
+
+button:hover {
+    background-color: tomato;
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Close Button Styles */
+.close {
+    color: orangered;
+    cursor: pointer;
+	 text-align: right;
+}
+
+/* Checkbox styles */
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+/* intérieur de la case à cocher */
+.custom-checkbox:checked {
+    background-color: tomato;
+}
+
+/* lorsqu'elle est cochée */
+.custom-checkbox:checked::after {
+    content: "\2713";
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Hover effect for plus icon */
+.fa-solid.fa-plus.fa-lg:hover {
+    color: white;
+}
