@@ -145,6 +145,7 @@ ul {
 li {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px;
     background-color: #f9f9f9;
     margin-bottom: 5px;
@@ -198,4 +199,45 @@ li:hover {
 /* Hover effect for plus icon */
 .fa-solid.fa-plus.fa-lg:hover {
     color: white;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        height: auto;
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    nav img {
+        width: 40px;
+        height: 35px;
+    }
+
+    footer {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 60px);
+    }
+
+    button {
+        padding: calc(.4em + var(--s)) calc(.8em + var(--s));
+        font-size: 14px;
+    }
+
+    li {
+        padding: 8px;
+    }
+
+    #currentDate {
+        font-size: 14px;
+    }
 }

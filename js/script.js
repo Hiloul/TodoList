@@ -50,44 +50,12 @@ function addTask() {
     }
 }
 
-function generatePDF() {
-    // Récupérer les éléments de la liste des tâches
-    var taskList = document.getElementById("taskList").innerHTML;
-
-    // Récupérer les notes
-    var notes = document.getElementById("notes").value;
-
-    // Créer le contenu du PDF avec les tâches à faire et les notes
-    var pdfContent = "<h2>Tâches à faire :</h2>" + taskList + "<h2>Notes :</h2><p>" + notes + "</p>";
-
-    // <a> pour télécharger le PDF
-    var link = document.createElement('a');
-    link.setAttribute('download', 'todo_list.pdf');
-
-    // Conversion du contenu en PDF (bibliothèque jsPDF)
-    var pdf = new jsPDF();
-    pdf.text(20, 20, 'Ma Todo List');
-    pdf.fromHTML(pdfContent, 20, 30);
-
-    // Objet Blob contenant le PDF
-    var pdfBlob = pdf.output("blob");
-
-    // URL pour le Blob
-    var url = URL.createObjectURL(pdfBlob);
-
-    // Lien de téléchargement
-    link.href = url;
-
-    // Démarrer le téléchargement
-    link.click();
-}
-
 // Obtenir la date actuelle
 const currentDate = new Date();
 const currentDateElement = document.getElementById('currentDate');
 
 // Formatage de la date Fr
-const options = { weekday: 'long', year:'numeric',month: 'long', day: 'numeric' };
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 const formattedDate = currentDate.toLocaleDateString('fr-FR', options);
 
 // Insérer la date dans HTML
